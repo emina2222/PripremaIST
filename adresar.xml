@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE adresar SYSTEM "adresar.dtd">
 
-<adresar>
+<adresar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="adresar.xsd">
   <osoba>
     <punoIme>
       <ime>Emina</ime>
