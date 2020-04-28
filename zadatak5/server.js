@@ -37,13 +37,13 @@ const server=http.createServer(function(request,response){
                 body+=data;
             })
             request.on('end',function(){
-                let osobe=JSON.parse(fs.readFile('osobe.json',function(err,data){
+                let osobe=JSON.parse(fs.readFileSync('osobe.json',function(err,data){
                     if(err){
                         response.writeHead(400);
                         response.end(JSON.stringify(err))
                         return;
                     }
-                }))
+                }));
                 let osobaId=parseInt(queryString.parse(body).id)
                 noviNizOsoba=[]
                 for(let o of osobe){
@@ -51,10 +51,36 @@ const server=http.createServer(function(request,response){
                         noviNizOsoba.push(o)
                     }
                 }
-                fs.writeFile('osobe.json',JSON.stringify(noviNizOsoba))
+                fs.writeFileSync('osobe.json',JSON.stringify(noviNizOsoba))
                 response.writeHead(200)
                 response.end("Uspesno ste izbrisali osobu.")
+            });
+        }
+        else if(urlObj.pathname=='/postaviAdresu'){
+            var body='';
+            request.on('data',function(data){
+                body+=data;
             })
+            request.on('end',function(){
+                let osobe=JSON.parse(fs.readFileSync('osobe.json',function(err,data){
+                    if(err){
+                        response.writeHead(400);
+                        response.end("Greska")
+                        return;
+                    }
+                }));
+                let idOsobe=parseInt(queryString.parse(body).id)
+                let adresaOsobe=queryString.parse(body).adresa
+                for(let o of osobe){
+                    if(o.id==idOsobe){
+                        o.adresa=adresaOsobe;
+                    }
+                }
+
+                fs.writeFileSync('osobe.json',JSON.stringify(osobe))
+            });
+            response.writeHead(200)
+            response.end("Adresa je uspesno postavljena.")
         }
     }
     else if(request.method=='GET'){
