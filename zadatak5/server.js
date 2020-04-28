@@ -1,16 +1,16 @@
 const http=require('http')
 const url=require('url')
 const fs=require('fs')
-const querystring=require('query-string')
+const querystring=require('querystring')
 
 const server=http.createServer(function(request,response){
     let urlObj=url.parse(request.url,true,false)
     if(request.method=='POST'){
-
+        if(urlObj.pathname=='/dodajOsobu'){
+            response.end("Primljeno")
+        }
     }
-    else if(request.method=='GET'){
-
-    }
+    
 });
 
 const port=2000;
