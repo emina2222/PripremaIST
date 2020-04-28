@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE adresar SYSTEM "adresar.dtd">
+
+<adresar>
+  <osoba>
+    <punoIme>
+      <ime>Emina</ime>
+      <srednjeIme>Elizabeta</srednjeIme>
+      <prezime>Marmarac</prezime>
+    </punoIme>
+    <datumRodjenja>
+      <dan>2</dan>
+      <mesec>2</mesec>
+      <godina>1999</godina>
+    </datumRodjenja>
+    <adresa status="stalna">
+      Sumadijske divizije 6, Beograd
+    </adresa>
+    <email status="privatni">emina.emax@gmail.com</email>
+  </osoba>
+</adresar>
