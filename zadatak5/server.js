@@ -110,6 +110,6 @@ const server=http.createServer(function(request,response){
 });
 
 const port=2000;
-const host='127.0.0.1';;
+const host='127.0.0.1';
 server.listen(port,host)
 console.log(`Server radi na adresi: ${host}: ${port}`);
