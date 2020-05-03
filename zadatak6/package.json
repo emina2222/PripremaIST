@@ -1,0 +1,25 @@
+{
+  "name": "zadatak6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emina2222/PripremaIST.git"
+  },
+  "author": "Emina Marmarac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emina2222/PripremaIST/issues"
+  },
+  "homepage": "https://github.com/emina2222/PripremaIST#readme",
+  "dependencies": {
+    "http": "0.0.1-security",
+    "querystring": "^0.2.0",
+    "url": "^0.11.0"
+  }
+}
