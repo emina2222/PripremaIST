@@ -2,7 +2,7 @@
 
 <!ELEMENT adresar (osoba)+>
 <!ELEMENT osoba (punoIme,datumRodjenja,adresa,(email)+)>
-<!ELEMENT punoIme (ime,(srednjeIme)*,(prezime)+)>
+<!ELEMENT punoIme (ime,(srednjeIme)?,(prezime)+)>
 <!ELEMENT ime (#PCDATA)>
 <!ELEMENT srednjeIme (#PCDATA)>
 <!ELEMENT prezime (#PCDATA)>
